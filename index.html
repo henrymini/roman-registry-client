@@ -38,6 +38,31 @@
     <form id="signout">
       <button class="btn">sign out</button>
     </form>
+    <form id="general-index">
+      <button class="btn">get all generals</button>
+    </form>
+    <form id="general-show">
+      <input required type="number" min="0" name="general[id]" placeholder="General ID">
+      <button class="btn">get general</button>
+    </form>
+    <form id="general-delete">
+      <input required type="number" name="general[id]" placeholder="General ID">
+      <button class="btn">delete general</button>
+    </form>
+    <form id="general-update">
+      <input required type="number" name="general[id]" id="general-id-update" placeholder="General ID">
+      <input required type="text" name="general[name]" placeholder="General Name">
+      <input required type="number" name="general[age]" placeholder="General Age">
+      <input required type="text" name="general[family]" placeholder="General Family">
+      <button class="btn">Update General</button>
+    </form>
+    <form id="general-create">
+      <input required type="text" name="general[name]" placeholder="General Name">
+      <input required type="number" name="general[age]" placeholder="General Age">
+      <input required type="text" name="general[family]" placeholder="General Family">
+      <button class="btn">Create General</button>
+    </form>
+    <div id='general-display'></div>
   </section>
 </body>
 

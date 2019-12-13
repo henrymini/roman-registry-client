@@ -3,6 +3,7 @@
 // use require with a reference to bundle the file and use it in this file
 
 const authEvents = require('./auth/events')
+const generalsEvents = require('./generals/events')
 
 // const example = require('./example')
 
@@ -11,4 +12,5 @@ const authEvents = require('./auth/events')
 
 $(() => {
   authEvents.addHandlers()
+  generalsEvents.addHandlers()
 })
