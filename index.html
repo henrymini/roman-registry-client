@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Roman Registry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <section class="before-auth">
+    <div id="message"></div>
+    <h1>Roman Registry</h1>
+    <form id="signup">
+      <input name="credentials[email]" type="email" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+      <button class="btn">sign up</button>
+    </form>
+    <form id="signin">
+      <input name="credentials[email]" type="email" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <button class="btn">sign in</button>
+    </form>
+  </section>
+  <section class="after-auth">
+    <form id="changepw">
+      <input name="passwords[old]" type="password" placeholder="old password">
+      <input name="passwords[new]" type="password" placeholder="new password">
+      <button class="btn">change password</button>
+    </form>
+    <form id="signout">
+      <button class="btn">sign out</button>
+    </form>
+  </section>
+</body>
+
 </html>
