@@ -1,7 +1,7 @@
 'use strict'
 
 const onIndexSuccess = responseData => {
-  console.log(responseData)
+  $('#general-display').val('')
   $('#general-display').val('')
   responseData.generals.forEach(general => {
     const generalHTML = (`
@@ -15,7 +15,7 @@ const onIndexSuccess = responseData => {
 }
 
 const onShowSuccess = responseData => {
-  console.log(responseData)
+  $('#general-display').val('')
   const generalHTML = (`
     <h4>Name: ${responseData.general.name}</h4>
     <p>Age: ${responseData.general.age}</p>
@@ -27,7 +27,8 @@ const onShowSuccess = responseData => {
 }
 
 const onDeleteSuccess = () => {
-  $('#general-display').val('successful removed')
+  $('#general-display').val('')
+  $('#message').val('successful removed')
   $('form').trigger('reset')
 }
 

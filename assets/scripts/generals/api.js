@@ -1,6 +1,7 @@
 'use strict'
 
 const config = require('../config')
+const store = require('../store')
 
 const index = () => {
   return $.ajax({
@@ -12,14 +13,32 @@ const index = () => {
 const show = formData => {
   return $.ajax({
     url: config.apiUrl + '/generals/' + formData.general.id,
-    method: 'GET'
+    method: 'GET',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
   })
 }
 
 const destroy = formData => {
   return $.ajax({
     url: config.apiUrl + '/generals/' + formData.general.id,
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
+const create = formData => {
+  console.log('console log is' + store.user.token)
+  return $.ajax({
+    url: config.apiUrl + '/generals',
+    method: 'POST',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: formData
   })
 }
 
@@ -27,14 +46,9 @@ const update = formData => {
   return $.ajax({
     url: config.apiUrl + '/generals/' + formData.general.id,
     method: 'PATCH',
-    data: formData
-  })
-}
-
-const create = formData => {
-  return $.ajax({
-    url: config.apiUrl + '/generals',
-    method: 'POST',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
     data: formData
   })
 }

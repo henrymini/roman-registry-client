@@ -38,6 +38,7 @@ const onUpdateGeneral = event => {
 const onCreateGeneral = event => {
   event.preventDefault()
   const formData = getFormFields(event.target)
+  console.log('console log is:', formData)
   api.create(formData)
     .then(ui.onCreateSuccess)
     .catch(ui.onFailure)
