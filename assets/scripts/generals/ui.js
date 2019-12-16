@@ -1,7 +1,7 @@
 'use strict'
 
 const onIndexSuccess = responseData => {
-  $('#general-display').val('')
+  // $('#general-display').html('')
   responseData.generals.forEach(general => {
     const generalHTML = (`
         <p>ID: ${general.id}</p>
@@ -10,7 +10,8 @@ const onIndexSuccess = responseData => {
         <p>Family: ${general.family}</p>
         <br>
       `)
-    $('#general-display').append(generalHTML)
+    $('#general-display').html('')
+    $('#general-display').html(generalHTML)
   })
 }
 

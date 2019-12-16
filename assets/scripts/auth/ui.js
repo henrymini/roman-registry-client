@@ -28,7 +28,7 @@ const onSignUpFailure = () => {
 
 const onSignInSuccess = responseData => {
   store.user = responseData.user
-  onSuccess('memento mori')
+  onSuccess('MEMENTO MORI')
   // timeout
   $('.after-auth').show()
   $('.before-auth').hide()
