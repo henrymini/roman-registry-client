@@ -1,18 +1,18 @@
 'use strict'
+const showGenerals = require('../templates/show_generals.handlebars')
 
 const onIndexSuccess = responseData => {
-  // $('#general-display').html('')
-  responseData.generals.forEach(general => {
-    const generalHTML = (`
-        <p>ID: ${general.id}</p>
-        <h4>Name: ${general.name}</h4>
-        <p>Age: ${general.age}</p>
-        <p>Family: ${general.family}</p>
-        <br>
-      `)
-    $('#general-display').html('')
-    $('#general-display').html(generalHTML)
-  })
+  const getGeneralsHTML = showGenerals({ generals: responseData.generals})
+  // responseData.generals.forEach(general => {
+  //   const generalHTML = (`
+  //       <p>ID: ${general.id}</p>
+  //       <h4>Name: ${general.name}</h4>
+  //       <p>Age: ${general.age}</p>
+  //       <p>Family: ${general.family}</p>
+  //       <br>
+  //     `)
+  $('#general-display').html(getGeneralsHTML)
+  // })
 }
 
 const onShowSuccess = responseData => {
