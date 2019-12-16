@@ -2,9 +2,9 @@
 
 const onIndexSuccess = responseData => {
   $('#general-display').val('')
-  $('#general-display').val('')
   responseData.generals.forEach(general => {
     const generalHTML = (`
+        <p>ID: ${general.id}</p>
         <h4>Name: ${general.name}</h4>
         <p>Age: ${general.age}</p>
         <p>Family: ${general.family}</p>
@@ -17,6 +17,7 @@ const onIndexSuccess = responseData => {
 const onShowSuccess = responseData => {
   $('#general-display').val('')
   const generalHTML = (`
+    <p>ID: ${responseData.general.id}</p>
     <h4>Name: ${responseData.general.name}</h4>
     <p>Age: ${responseData.general.age}</p>
     <p>Age: ${responseData.general.family}</p>

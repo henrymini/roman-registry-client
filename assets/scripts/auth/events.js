@@ -26,8 +26,8 @@ const onChangePassword = event => {
   const form = event.target
   const formData = getFormFields(form)
   api.changepw(formData)
-    .then(console.log('yup'))
-    .catch(() => console.log('goofed'))
+    .then(ui.onChangePasswordSuccess)
+    .catch(ui.onChangePasswordFailure)
 }
 
 const onSignOut = event => {
@@ -35,6 +35,8 @@ const onSignOut = event => {
   const form = event.target
   const formData = getFormFields(form)
   api.signout(formData)
+    .then(ui.onSignoutSuccess)
+    .catch(ui.onSignoutFailure)
 }
 
 const addHandlers = event => {

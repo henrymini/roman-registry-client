@@ -18,7 +18,8 @@ const onFailure = message => {
 }
 
 const onSignUpSuccess = () => {
-  onSuccess('salve imperator')
+  onSuccess('SALVE IMPERATOR')
+  // timeout
 }
 
 const onSignUpFailure = () => {
@@ -28,6 +29,9 @@ const onSignUpFailure = () => {
 const onSignInSuccess = responseData => {
   store.user = responseData.user
   onSuccess('memento mori')
+  // timeout
+  $('.after-auth').show()
+  $('.before-auth').hide()
 }
 
 const onSignInFailure = () => {
@@ -44,7 +48,9 @@ const onChangePasswordFailure = () => {
 
 const onSignoutSuccess = responseData => {
   store.user = store
-  onSuccess('valedico')
+  onSuccess('VALEDICO')
+  $('.before-auth').show()
+  $('.after-auth').hide()
 }
 
 const onSignoutFailure = () => {

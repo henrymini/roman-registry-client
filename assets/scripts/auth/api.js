@@ -30,6 +30,7 @@ const changepw = formData => {
 }
 
 const signout = () => {
+  console.log(store.user.token)
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
