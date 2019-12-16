@@ -31,7 +31,7 @@ const destroy = formData => {
 }
 
 const create = formData => {
-  console.log('console log is' + store.user.token)
+  // console.log('console log is' + store.user.token)
   return $.ajax({
     url: config.apiUrl + '/generals',
     method: 'POST',
