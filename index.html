@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Roman Registry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div id="message"></div>
+  <section class="before-auth">
+    <h1>Roman Registry</h1>
+    <form id="signup">
+      <input name="credentials[email]" type="email" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+      <button class="btn btn-outline-dark">SIGN UP</button>
+    </form>
+    <form id="signin">
+      <input name="credentials[email]" type="email" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <button class="btn btn-outline-dark">SIGN IN</button>
+    </form>
+  </section>
+  <section class="after-auth">
+    <form id="changepw">
+      <input name="passwords[old]" type="password" placeholder="old password">
+      <input name="passwords[new]" type="password" placeholder="new password">
+      <button class="btn">CHANGE PASSWORD</button>
+    </form>
+    <form id="signout">
+      <button class="btn">SIGN OUT</button>
+    </form>
+    <form id="general-index">
+      <button class="btn">GET ALL GENERALS</button>
+    </form>
+    <form id="general-show">
+      <input required type="number" min="0" name="general[id]" placeholder="General ID">
+      <button class="btn">GET GENERAL</button>
+    </form>
+    <form id="general-delete">
+      <input required type="number" name="general[id]" placeholder="General ID">
+      <button class="btn">DELETE GENERAL</button>
+    </form>
+    <form id="general-update">
+      <input required type="number" name="general[id]" id="general-id-update" placeholder="General ID">
+      <input required type="text" name="general[name]" placeholder="General Name">
+      <input required type="number" name="general[age]" placeholder="General Age">
+      <input required type="text" name="general[family]" placeholder="General Family">
+      <button class="btn">UPDATE GENERAL</button>
+    </form>
+    <form id="general-create">
+      <input required type="text" name="general[name]" placeholder="General Name">
+      <input required type="number" name="general[age]" placeholder="General Age">
+      <input required type="text" name="general[family]" placeholder="General Family">
+      <button class="btn">CREATE GENERAL</button>
+    </form>
+    <div id='general-display'></div>
+  </section>
+</body>
+
+</html>
